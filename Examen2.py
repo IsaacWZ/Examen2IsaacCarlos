@@ -77,7 +77,7 @@ class TestMiClase(unittest.TestCase):
 
     def test_VerificaEncuentra(self):
         mi_clase = MiClase(None, None, None, None, None)
-        self.assertTrue(mi_clase.Encuentra([1,2,3,4,5], 5))
+        self.assertTrue(mi_clase.Encuentra([1,2,3,4,5], 7))
 
 
 if __name__ == '__main__':
