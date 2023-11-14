@@ -27,6 +27,9 @@ class MiClase:
         if any(song is None for song in lista):
             return False
         return True
+    def Encuentra(self, lista, elemento):
+        return elemento in lista
+        
 ################################################################################################
 #Ejemplo de ejecución
 # # Crear un objeto de la clase MiClase
@@ -70,5 +73,12 @@ class TestMiClase(unittest.TestCase):
         #Carlos
         self.assertFalse(mi_clase.VerificaListaCanciones([None, None, None]))
         self.assertTrue(mi_clase.VerificaListaCanciones([1, 2, 3, 4, 5, "song"]))
+
+
+    def test_VerificaEncuentra(self):
+        mi_clase = MiClase(None, None, None, None, None)
+        self.assertTrue(mi_clase.Encuentra([1,2,3,4,5], 5))
+
+
 if __name__ == '__main__':
     unittest.main()
