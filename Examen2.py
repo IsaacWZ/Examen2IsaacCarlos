@@ -63,7 +63,9 @@ class TestMiClase(unittest.TestCase):
     def test_ObtieneMasBailable(self):
         mi_clase = MiClase(None, None, None, None, None)
         #Isaac
-
+        mi_clase = MiClase(None, None, None, None, None)
+        self.assertEqual(mi_clase.ObtieneMasBailable([0.8, 0.9, 0.7]), 0.9)
+        self.assertIsNone(mi_clase.ObtieneMasBailable([]))
 
         #Carlos
         self.assertEqual(mi_clase.ObtieneMasBailable([1, 5, 3, 7, 2]), 7)
